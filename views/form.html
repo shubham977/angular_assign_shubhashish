@@ -1,0 +1,70 @@
+<style>
+    label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+    }
+
+    select {
+        width: 178px;
+    }
+
+    div {
+        margin-top: 10px;
+    }
+
+    h2 {
+        margin-left: 75px;
+    }
+
+</style>
+<h2>ADMIN PAGE</h2>
+<form name="inputform" id="inputForm">
+    <div>
+        <span><label>First Name:</label></span>
+        <input type='text' id='fName' ng-model='person.fName' ng-change="check()"><br>
+    </div>
+    <div>
+        <span><label>Last Name:</label></span>
+        <input type='text' ng-model='person.lName' ng-change="check()"><br>
+    </div>
+    <div>
+        <span><label>DOB:</label></span>
+        <input type='text' ng-model='person.dob' ng-change="check()"><br>
+    </div>
+    <div>
+        <span><label>Address:</label></span>
+        <input type='text' ng-model='person.address' ng-change="check()"><br>
+    </div>
+    <div>
+        <span><label>Phone:</label></span>
+        <input type='text' ng-model='person.phone' ng-change="check()"><br>
+    </div>
+    <div>
+        <span><label>Gender:</label></span>
+        <span ng-repeat="gender in genderType">
+        <input type="radio" ng-value="gender" ng-model="person.gender" ng-change="check()">{{gender}}
+        </span>
+        <!--<input type='radio'  value='male' ng-model='person.gender' ng-change="check()">Male
+        <input type='radio'  value='female' ng-model='person.gender' ng-change="check()">Female<br>-->
+    </div>
+
+
+    <div>
+        <span><label>Cars:</label></span>
+        <span ng-repeat="car in cars">
+        <input type="checkbox" ng-value="car" ng-model="person.carInterest[car]" ng-change="check()">{{car}}
+        </span>
+        <!--<input type='radio'  value='male' ng-model='person.gender' ng-change="check()">Male
+        <input type='radio'  value='female' ng-model='person.gender' ng-change="check()">Female<br>-->
+    </div>
+
+    <div>
+        <span><label>Country: </label></span><select ng-model="person.country"
+                                                     ng-options="x for x in country" ng-change="check()"></select><br>
+    </div>
+    {{validation}}
+    <button type="submit" ng-click="toggle()" ng-disabled="validation" style="margin-left: 100px; margin-top: 10px">
+        SUBMIT
+    </button>
+</form>

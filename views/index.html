@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body ng-app="myapp">
+<div ng-controller="myController">
+
+    <form-directive ng-show="(user==1)?true:false"></form-directive>
+
+
+    <user-directive ng-show="(user==1)?false:true"></user-directive>
+
+
+</div>
+
+<script type="text/javascript" src="/angular_assign_shubhashish/node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="/angular_assign_shubhashish/js/myapp.js"></script>
+<script type="text/javascript" src="/angular_assign_shubhashish/js/controllers/myController.js"></script>
+<script type="text/javascript" src="/angular_assign_shubhashish/js/directives/formDirective.js"></script>
+<script type="text/javascript" src="/angular_assign_shubhashish/js/directives/userDirective.js"></script>
+
+
+</body>
+</html>

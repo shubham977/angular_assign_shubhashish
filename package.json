@@ -1,0 +1,14 @@
+{
+  "name": "angular_assign_shubhashish",
+  "version": "1.0.0",
+  "description": "angular assignment by shubhashish",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shubham97",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}

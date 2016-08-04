@@ -1,0 +1,57 @@
+<style>
+    td,th{
+        border-style: double;
+        border-width: 2px ;
+    }
+    td{
+        width:200px;
+    }
+    th{
+        width:100px;
+    }
+    h2 {
+        margin-left: 85px;
+    }
+</style>
+<h2>USER PAGE</h2>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <td>{{person.fName}}</td>
+    </tr>
+    <tr>
+        <th>Last Name</th>
+        <td>{{person.lName}}</td>
+    </tr>
+
+    <tr>
+        <th>DOB</th>
+        <td>{{person.dob}}</td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>{{person.address}}</td>
+    </tr>
+    <tr>
+        <th>Phone</th>
+        <td>{{person.phone}}</td>
+    </tr>
+    <tr>
+        <th>Gender</th>
+        <td>{{person.gender}}</td>
+    </tr>
+    <tr>
+        <th>Cars</th>
+        <td><span ng-repeat="(key, val) in person.carInterest">
+            <span ng-show="val">
+            {{key}}
+            </span>
+        </span> </td>
+    </tr>
+    <tr>
+        <th>Country</th>
+        <td>{{person.country}}</td>
+    </tr>
+
+</table>
